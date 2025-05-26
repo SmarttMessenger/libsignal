@@ -26,55 +26,43 @@ pub(crate) const WS_MAX_IDLE_TIME: Duration = Duration::from_secs(15);
 const DEFAULT_HTTPS_PORT: NonZeroU16 = nonzero!(443_u16);
 
 const DOMAIN_CONFIG_CHAT: DomainConfig = DomainConfig {
-    hostname: "chat.signal.org",
+    hostname: "chat.smarttmessenger.com",
     port: DEFAULT_HTTPS_PORT,
-    ip_v4: &[
-        ip_addr!(v4, "76.223.92.165"),
-        ip_addr!(v4, "13.248.212.111"),
-    ],
-    ip_v6: &[
-        ip_addr!(v6, "2600:9000:a507:ab6d:4ce3:2f58:25d7:9cbf"),
-        ip_addr!(v6, "2600:9000:a61f:527c:d5eb:a431:5239:3232"),
-    ],
+    ip_v4: &[ip_addr!(v4, "44.227.47.178")],
+    ip_v6: &[],
     cert: RootCertificates::Signal,
     proxy_path: "/service",
 };
 
 const DOMAIN_CONFIG_CHAT_STAGING: DomainConfig = DomainConfig {
-    hostname: "chat.staging.signal.org",
+    hostname: "chat.staging.smarttmessenger.com",
     port: DEFAULT_HTTPS_PORT,
-    ip_v4: &[
-        ip_addr!(v4, "76.223.72.142"),
-        ip_addr!(v4, "13.248.206.115"),
-    ],
-    ip_v6: &[
-        ip_addr!(v6, "2600:9000:a507:ab6d:7b25:2580:8bd6:3b93"),
-        ip_addr!(v6, "2600:9000:a61f:527c:2215:cd9:bac6:a2f8"),
-    ],
+    ip_v4: &[ip_addr!(v4, "44.227.47.178")],
+    ip_v6: &[],
     cert: RootCertificates::Signal,
     proxy_path: "/service-staging",
 };
 
 const DOMAIN_CONFIG_CDSI: DomainConfig = DomainConfig {
-    hostname: "cdsi.signal.org",
+    hostname: "cdsi.smarttmessenger.com",
     port: DEFAULT_HTTPS_PORT,
-    ip_v4: &[ip_addr!(v4, "40.122.45.194")],
-    ip_v6: &[ip_addr!(v6, "2603:1030:7::1")],
+    ip_v4: &[ip_addr!(v4, "13.73.37.235")],
+    ip_v6: &[],
     cert: RootCertificates::Signal,
     proxy_path: "/cdsi",
 };
 
 const DOMAIN_CONFIG_CDSI_STAGING: DomainConfig = DomainConfig {
-    hostname: "cdsi.staging.signal.org",
+    hostname: "cdsi.staging.smarttmessenger.com",
     port: DEFAULT_HTTPS_PORT,
-    ip_v4: &[ip_addr!(v4, "104.43.162.137")],
-    ip_v6: &[ip_addr!(v6, "2603:1030:7::732")],
+    ip_v4: &[ip_addr!(v4, "13.73.37.235")],
+    ip_v6: &[],
     cert: RootCertificates::Signal,
     proxy_path: "/cdsi-staging",
 };
 
 const DOMAIN_CONFIG_SVR2: DomainConfig = DomainConfig {
-    hostname: "svr2.signal.org",
+    hostname: "svr2.smarttmessenger.com",
     port: DEFAULT_HTTPS_PORT,
     ip_v4: &[ip_addr!(v4, "20.66.40.69")],
     ip_v6: &[],
@@ -83,7 +71,7 @@ const DOMAIN_CONFIG_SVR2: DomainConfig = DomainConfig {
 };
 
 const DOMAIN_CONFIG_SVR2_STAGING: DomainConfig = DomainConfig {
-    hostname: "svr2.staging.signal.org",
+    hostname: "svr2.staging.smarttmessenger.com",
     port: DEFAULT_HTTPS_PORT,
     ip_v4: &[ip_addr!(v4, "20.253.229.239")],
     ip_v6: &[],
@@ -92,7 +80,7 @@ const DOMAIN_CONFIG_SVR2_STAGING: DomainConfig = DomainConfig {
 };
 
 const DOMAIN_CONFIG_SVR3_SGX: DomainConfig = DomainConfig {
-    hostname: "svr3.signal.org",
+    hostname: "svr3.smarttmessenger.com",
     port: DEFAULT_HTTPS_PORT,
     ip_v4: &[ip_addr!(v4, "143.244.220.150")],
     ip_v6: &[],
@@ -101,7 +89,7 @@ const DOMAIN_CONFIG_SVR3_SGX: DomainConfig = DomainConfig {
 };
 
 const DOMAIN_CONFIG_SVR3_SGX_STAGING: DomainConfig = DomainConfig {
-    hostname: "backend1.svr3.staging.signal.org",
+    hostname: "backend1.svr3.staging.smarttmessenger.com",
     port: DEFAULT_HTTPS_PORT,
     ip_v4: &[ip_addr!(v4, "13.88.63.29")],
     ip_v6: &[],
@@ -110,7 +98,7 @@ const DOMAIN_CONFIG_SVR3_SGX_STAGING: DomainConfig = DomainConfig {
 };
 
 const DOMAIN_CONFIG_SVR3_NITRO: DomainConfig = DomainConfig {
-    hostname: "devnull.signal.org",
+    hostname: "devnull.smarttmessenger.com",
     port: DEFAULT_HTTPS_PORT,
     ip_v4: &[],
     ip_v6: &[],
@@ -119,7 +107,7 @@ const DOMAIN_CONFIG_SVR3_NITRO: DomainConfig = DomainConfig {
 };
 
 const DOMAIN_CONFIG_SVR3_NITRO_STAGING: DomainConfig = DomainConfig {
-    hostname: "backend2.svr3.staging.signal.org",
+    hostname: "backend2.svr3.staging.smarttmessenger.com",
     port: DEFAULT_HTTPS_PORT,
     ip_v4: &[ip_addr!(v4, "75.2.86.85"), ip_addr!(v4, "99.83.239.137")],
     ip_v6: &[],
@@ -128,7 +116,7 @@ const DOMAIN_CONFIG_SVR3_NITRO_STAGING: DomainConfig = DomainConfig {
 };
 
 pub const DOMAIN_CONFIG_SVR3_TPM2SNP: DomainConfig = DomainConfig {
-    hostname: "devnull.signal.org",
+    hostname: "devnull.smarttmessenger.com",
     port: DEFAULT_HTTPS_PORT,
     ip_v4: &[],
     ip_v6: &[],
@@ -137,7 +125,7 @@ pub const DOMAIN_CONFIG_SVR3_TPM2SNP: DomainConfig = DomainConfig {
 };
 
 pub const DOMAIN_CONFIG_SVR3_TPM2SNP_STAGING: DomainConfig = DomainConfig {
-    hostname: "backend3.svr3.staging.signal.org",
+    hostname: "backend3.svr3.staging.smarttmessenger.com",
     port: DEFAULT_HTTPS_PORT,
     ip_v4: &[ip_addr!(v4, "13.88.30.76")],
     ip_v6: &[],
