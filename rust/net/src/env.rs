@@ -58,16 +58,10 @@ const DOMAIN_CONFIG_CHAT: DomainConfig = DomainConfig {
 };
 
 const DOMAIN_CONFIG_CHAT_STAGING: DomainConfig = DomainConfig {
-    ip_v4: &[
-        ip_addr!(v4, "76.223.72.142"),
-        ip_addr!(v4, "13.248.206.115"),
-    ],
-    ip_v6: &[
-        ip_addr!(v6, "2600:9000:a507:ab6d:7b25:2580:8bd6:3b93"),
-        ip_addr!(v6, "2600:9000:a61f:527c:2215:cd9:bac6:a2f8"),
-    ],
+    ip_v4: &[ip_addr!(v4, "13.73.37.235")],
+    ip_v6: &[],
     connect: ConnectionConfig {
-        hostname: "chat.staging.signal.org",
+        hostname: "chat.staging.smarttmessenger.com",
         port: DEFAULT_HTTPS_PORT,
         cert: SIGNAL_ROOT_CERTIFICATES,
         confirmation_header_name: Some(TIMESTAMP_HEADER_NAME),
@@ -95,7 +89,7 @@ const DOMAIN_CONFIG_CDSI: DomainConfig = DomainConfig {
 
 const DOMAIN_CONFIG_CDSI_STAGING: DomainConfig = DomainConfig {
     connect: ConnectionConfig {
-        hostname: "cdsi.staging.signal.org",
+        hostname: "cdsi.staging.smarttmessenger.com",
         port: DEFAULT_HTTPS_PORT,
         cert: SIGNAL_ROOT_CERTIFICATES,
         confirmation_header_name: None,
@@ -104,8 +98,8 @@ const DOMAIN_CONFIG_CDSI_STAGING: DomainConfig = DomainConfig {
             configs: [PROXY_CONFIG_F_STAGING, PROXY_CONFIG_G],
         }),
     },
-    ip_v4: &[ip_addr!(v4, "104.43.162.137")],
-    ip_v6: &[ip_addr!(v6, "2603:1030:7::732")],
+    ip_v4: &[ip_addr!(v4, "13.73.37.235")],
+    ip_v6: &[],
 };
 
 const DOMAIN_CONFIG_SVR2: DomainConfig = DomainConfig {
