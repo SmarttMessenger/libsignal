@@ -37,28 +37,22 @@ const DEFAULT_HTTPS_PORT: NonZeroU16 = nonzero!(443_u16);
 pub const TIMESTAMP_HEADER_NAME: &str = "x-signal-timestamp";
 
 const DOMAIN_CONFIG_CHAT: DomainConfig = DomainConfig {
-    ip_v4: &[
-        ip_addr!(v4, "76.223.92.165"),
-        ip_addr!(v4, "13.248.212.111"),
-    ],
-    ip_v6: &[
-        ip_addr!(v6, "2600:9000:a507:ab6d:4ce3:2f58:25d7:9cbf"),
-        ip_addr!(v6, "2600:9000:a61f:527c:d5eb:a431:5239:3232"),
-    ],
+    ip_v4: &[ip_addr!(v4, "44.227.47.178")],
+    ip_v6: &[],
     connect: ConnectionConfig {
-        hostname: "chat.signal.org",
+        hostname: "chat.staging.smarttmessenger.com",
         port: DEFAULT_HTTPS_PORT,
         cert: SIGNAL_ROOT_CERTIFICATES,
         confirmation_header_name: Some(TIMESTAMP_HEADER_NAME),
         proxy: Some(ConnectionProxyConfig {
-            path_prefix: "/service",
-            configs: [PROXY_CONFIG_F_PROD, PROXY_CONFIG_G],
+            path_prefix: "/service-staging",
+            configs: [PROXY_CONFIG_F_STAGING, PROXY_CONFIG_G],
         }),
     },
 };
 
 const DOMAIN_CONFIG_CHAT_STAGING: DomainConfig = DomainConfig {
-    ip_v4: &[ip_addr!(v4, "13.73.37.235")],
+    ip_v4: &[ip_addr!(v4, "44.227.47.178")],
     ip_v6: &[],
     connect: ConnectionConfig {
         hostname: "chat.staging.smarttmessenger.com",
@@ -74,17 +68,17 @@ const DOMAIN_CONFIG_CHAT_STAGING: DomainConfig = DomainConfig {
 
 const DOMAIN_CONFIG_CDSI: DomainConfig = DomainConfig {
     connect: ConnectionConfig {
-        hostname: "cdsi.signal.org",
+        hostname: "cdsi.staging.smarttmessenger.com",
         port: DEFAULT_HTTPS_PORT,
         cert: SIGNAL_ROOT_CERTIFICATES,
         confirmation_header_name: None,
         proxy: Some(ConnectionProxyConfig {
-            path_prefix: "/cdsi",
-            configs: [PROXY_CONFIG_F_PROD, PROXY_CONFIG_G],
+            path_prefix: "/cdsi-staging",
+            configs: [PROXY_CONFIG_F_STAGING, PROXY_CONFIG_G],
         }),
     },
-    ip_v4: &[ip_addr!(v4, "40.122.45.194")],
-    ip_v6: &[ip_addr!(v6, "2603:1030:7::1")],
+    ip_v4: &[ip_addr!(v4, "20.57.211.97")],
+    ip_v6: &[],
 };
 
 const DOMAIN_CONFIG_CDSI_STAGING: DomainConfig = DomainConfig {
@@ -98,7 +92,7 @@ const DOMAIN_CONFIG_CDSI_STAGING: DomainConfig = DomainConfig {
             configs: [PROXY_CONFIG_F_STAGING, PROXY_CONFIG_G],
         }),
     },
-    ip_v4: &[ip_addr!(v4, "13.73.37.235")],
+    ip_v4: &[ip_addr!(v4, "20.57.211.97")],
     ip_v6: &[],
 };
 
